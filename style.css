@@ -30,10 +30,16 @@ body {
 
 .menu-up {
     background-color: gold;
+    display: grid;
+    grid-template-rows: repeat(6, minmax(30px, 50px));
+    align-content: space-evenly
 }
 
 .menu-down {
     background-color: greenyellow;
+    display: grid;
+    grid-template-rows: repeat(3, minmax(30px, 50px));
+    align-content: space-evenly;
 }
 
 .header {
