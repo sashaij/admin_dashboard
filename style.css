@@ -4,6 +4,15 @@ html {
     margin: 0;
 }
 
+/* 
+- switch user section alignment to center 
+when in mobile device layout
+- prevent notifications icon from shrinking 
+when decreacing viewport size
+- figure out space distribution between 
+search and user section when in full screen
+*/
+
 body {
     display: grid;
     grid-template-columns: 60px 3fr;
@@ -37,8 +46,33 @@ body {
     div.header {
         display: grid;
         grid-template-rows: repeat(2, 1fr);
-        grid-template-columns: 2fr 3fr;
+        grid-template-columns: repeat(2, 1fr);
     }
+
+    div.user-section {
+        /* min-width: 340px; */
+    }
+
+    div#notifications {
+        width: 30px;
+        height: auto;
+    }
+
+    div#notifications-image {
+        width: 30px;
+        height: auto;
+    }
+
+    img#user-pic-img {
+        width: 50px;
+        height: auto;
+        border-radius: 100px;
+    }
+
+    div#user-name {
+        font-size: 1rem;
+    }
+
 }
 
 .sidebar {
@@ -68,6 +102,7 @@ body {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: 100%;
+    min-width: 410px;
 }
 
 /*--------------search----------------*/
@@ -82,8 +117,8 @@ body {
 }
 
 #search-button {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: auto;
     border-style: none;
     background-color: inherit;
 }
@@ -95,7 +130,7 @@ body {
 
 #search-field {
     width: 100%;
-    height: 25px;
+    height: 35px;
     border-radius: 50px;
     border-style: none;
     background-color: #d7d7d7;
@@ -106,6 +141,37 @@ body {
 }
 
 /*--------------search----------------*/
+
+/*--------------notifications & user profile--------------*/
+    .user-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 30px;
+        margin: 0 30px 0 30px;
+    }
+
+    #notifications {
+        width: 50px;
+        height: auto;
+    }
+
+    #notifications-image {
+        width: 50px;
+        height: auto;
+    }
+
+    #user-pic-img {
+        width: 50px;
+        height: auto;
+        border-radius: 100px;
+    }
+
+    #user-name {
+        font-size: 1.8rem;
+    }
+/*--------------notifications & user profile--------------*/
 
 
 /*---------sidebar logo and menu menu-----------*/
