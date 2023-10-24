@@ -1,13 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&family=Onest:wght@300&display=swap');
+html {
+    height: 100%;
+    margin: 0;
+}
 
 body {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 60px 3fr;
     grid-template-rows: 1fr 5fr;
     margin: 0;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     font-family: 'Mukta', sans-serif, Arial, Helvetica, sans-serif;
+}
+
+@media (min-width: 680px) {
+    body {
+        grid-template-columns: 1fr 3fr;
+    }
+    
+    html {
+        height: 100%;
+        margin: 0;
+    }
+    
+
+    div.logo-text,
+    div.menu-item {
+        display: block;
+    }
+
+    div.sidebar {
+        grid-template-columns: 1fr 3fr;
+    }
 }
 
 .sidebar {
@@ -15,7 +40,7 @@ body {
     grid-row: span 2;
     display: grid;
     grid-template-rows: 90px 70px repeat(6, 50px) 70px repeat(3, 50px);
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 60px;
     grid-template-areas: "logo company-name"
                          ". ."
                          "home-icon home"
@@ -40,6 +65,11 @@ body {
     justify-content: center;
     align-items: center;
 } */
+
+.logo-text,
+.menu-item {
+    display: none;
+}
 
 /*---------sidebar logo and menu menu-----------*/
 
