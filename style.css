@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&family=Onest:wght@300&display=swap');
+
 body {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -5,14 +7,15 @@ body {
     margin: 0;
     height: 100vh;
     width: 100vw;
+    font-family: 'Mukta', sans-serif, Arial, Helvetica, sans-serif;
 }
 
 .sidebar {
     background-color: aqua;
     grid-row: span 2;
     display: grid;
-    grid-template-rows: repeat(2, 100px) repeat(6, 80px) 100px repeat(3, 80px);
-    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 90px 70px repeat(6, 50px) 70px repeat(3, 50px);
+    grid-template-columns: 1fr 3fr;
     grid-template-areas: "logo company-name"
                          ". ."
                          "home-icon home"
@@ -24,19 +27,30 @@ body {
                          ". ."
                          "settings-icon settings"
                          "support-icon support"
-                         "privacy-icon privacy"
-                            ;
+                         "privacy-icon privacy";
+    align-items: center;
+    justify-items: center;
 }
 
-.logo {
+/* .logo {
     background-color: cadetblue;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
+} */
 
 /*---------sidebar logo and menu menu-----------*/
+
+.menu-img {
+    height: 30px;
+    width: auto;
+}
+
+.menu-item,
+.logo-text {
+    justify-self: start;
+}
 
 .logo-image {
     grid-area: logo;
@@ -125,19 +139,6 @@ body {
 
 /*--------------sidebar end---------------*/
 
-.menu-up {
-    background-color: gold;
-    display: grid;
-    grid-template-rows: repeat(6, minmax(30px, 50px));
-    align-content: space-evenly
-}
-
-.menu-down {
-    background-color: greenyellow;
-    display: grid;
-    grid-template-rows: repeat(3, minmax(30px, 50px));
-    align-content: space-evenly;
-}
 
 .header {
     background-color: rgb(255, 252, 252);
