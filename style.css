@@ -13,6 +13,19 @@ body {
     display: grid;
     grid-template-rows: repeat(2, 100px) repeat(6, 80px) 100px repeat(3, 80px);
     grid-template-columns: 1fr 5fr;
+    grid-template-areas: "logo company-name"
+                         ". ."
+                         "home-icon home"
+                         "profile-icon profile"
+                         "messages-icon messages"
+                         "history-icon history"
+                         "tasks-icon tasks"
+                         "communities-icon communities"
+                         ". ."
+                         "settings-icon settings"
+                         "support-icon support"
+                         "privacy-icon privacy"
+                            ;
 }
 
 .logo {
@@ -23,10 +36,94 @@ body {
     align-items: center;
 }
 
+/*---------sidebar logo and menu menu-----------*/
+
+.logo-image {
+    grid-area: logo;
+}
+
+.logo-text {
+    grid-area: company-name;
+}
+
 #company-logo {
     width: 50px;
     height: auto;
 }
+
+#home-icon {
+    grid-area: home-icon;
+}
+
+#home {
+    grid-area: home;
+}
+
+#profile-icon {
+    grid-area: profile-icon;
+}
+
+#profile {
+    grid-area: profile;
+}
+
+#messages-icon {
+    grid-area: messages-icon;
+}
+
+#messages {
+    grid-area: messages;
+}
+
+#history-icon {
+    grid-area: history-icon;
+}
+
+#history {
+    grid-area: history;
+}
+
+#tasks-icon {
+    grid-area: tasks-icon;
+}
+
+#tasks {
+    grid-area: tasks;
+}
+
+#communities-icon {
+    grid-area: communities-icon;
+}
+
+#communities {
+    grid-area: communities;
+}
+
+#settings-icon {
+    grid-area: settings-icon;
+}
+
+#settings {
+    grid-area: settings;
+}
+
+#support-icon {
+    grid-area: support-icon;
+}
+
+#support {
+    grid-area: support;
+}
+
+#privacy-icon {
+    grid-area: privacy-icon;
+}
+
+#privacy {
+    grid-area: privacy;
+}
+
+/*--------------sidebar end---------------*/
 
 .menu-up {
     background-color: gold;
