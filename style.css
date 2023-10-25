@@ -85,6 +85,10 @@ body {
         font-size: 1rem;
     }
 
+    div#greet-user-name {
+        display: block;
+    }
+
 }
 
 .sidebar {
@@ -220,6 +224,10 @@ body {
         width: 75px;
         height: 35px;
         border-radius: 50px;
+    }
+
+    #greet-user-name {
+        display: none;
     }
 /*--------------notifications & user profile--------------*/
 
