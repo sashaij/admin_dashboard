@@ -9,12 +9,9 @@ html {
 }
 
 /* 
-- switch user section alignment to center 
-when in mobile device layout
-- prevent notifications icon from shrinking 
-when decreacing viewport size
-- figure out space distribution between 
-search and user section when in full screen
+- left items to left, right - to right when in two cols layout
+- adjust sidebar collapsing before screen size reaches maximum 
+and starts cover the content
 */
 
 body {
@@ -30,12 +27,21 @@ body {
 @media (min-width: 970px) {
     div.header {
         display: grid;
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         grid-template-columns: 4fr 3fr;
         min-width: 450px;
         justify-items: center;
         align-items: center;
     }
+
+    div#profile-pic {
+        display: block;
+    }
+    
+    div.greeting {
+
+    }
+    
 }
 @media (min-width: 532px) {
     body {
@@ -136,22 +142,30 @@ body {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: start;
+        justify-content: center;
         gap: 40px;
-        margin-left: 40px;
         width: 100%;
     }
     
-    .greeting-cont {
+    #greeting-cont {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
+        align-items: center;
     }
 
     #profile-image {
         width: 60px;
         height: auto;
         border-radius: 50px;
+    }
+
+    #profile-name {
+        font-size: 2rem;
+    }
+
+    #profile-pic {
+        display: none;
     }
 /* -------------greeting---------------- */
 
@@ -182,8 +196,7 @@ body {
     flex-direction: row;
     align-items: center;
     gap: 15px;
-    margin-left: 30px;
-    margin-right: 30px;
+    width: calc(100% - 80px);
 } 
 
 #search-button {
@@ -202,9 +215,8 @@ body {
 }
 
 #search-field {
-    width: 313px;
+    width: 100%;
     display: block;
-    /* margin-left: 35px ; */
     padding: 0;
     height: 35px;
     border-radius: 50px;
