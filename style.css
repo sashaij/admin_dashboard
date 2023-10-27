@@ -24,9 +24,6 @@ body {
     font-family: 'Mukta', sans-serif, Arial, Helvetica, sans-serif;
 }
 
-<<<<<<< HEAD
-@media (min-width: 532px) {
-=======
 @media (min-width: 970px) {
     div.header {
         display: grid;
@@ -48,7 +45,6 @@ body {
     }
 }
 @media (min-width: 800px) {
->>>>>>> header-layout
     body {
         grid-template-columns: 220px calc(100% - 220px);
     }
@@ -137,13 +133,8 @@ body {
 
 .header {
     display: grid;
-<<<<<<< HEAD
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: minmax(80px, 1fr) 8fr;
-=======
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: 1fr;
->>>>>>> header-layout
     min-width: 450px;
     justify-items: center;
     align-items: center;
@@ -207,17 +198,6 @@ body {
 /*--------------search----------------*/
 
  .search {
-<<<<<<< HEAD
-    display: grid;
-/*     flex-direction: row;
-    align-items: center;
-    gap: 15px;
-    margin-left: 30px;
-    margin-right: 30px; */
-} 
-
-#search-button {
-=======
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -227,7 +207,6 @@ body {
 
 #search-button {
     display: block;
->>>>>>> header-layout
     width: 40px;
     height: auto;
     border-style: none;
@@ -242,14 +221,8 @@ body {
 }
 
 #search-field {
-<<<<<<< HEAD
-    width: 313px;
-    display: block;
-    margin-left: 35px ;
-=======
     width: 100%;
     display: block;
->>>>>>> header-layout
     padding: 0;
     height: 35px;
     border-radius: 50px;
