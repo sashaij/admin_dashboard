@@ -39,11 +39,12 @@ body {
     }
     
     div.greeting {
-
+        justify-content: start;
+        margin-left: 90px;
+        gap: 50px;
     }
-    
 }
-@media (min-width: 532px) {
+@media (min-width: 800px) {
     body {
         grid-template-columns: 220px calc(100% - 220px);
     }
@@ -184,7 +185,8 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    gap: 50px;
+    width: 350px;
 }
 
 /* -------------header-buttons---------- */
