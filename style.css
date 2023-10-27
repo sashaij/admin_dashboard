@@ -6,7 +6,8 @@ html {
 
 :root {
     --secondary-color: #ffdb0d;
-    --cards-background: #e4e4e4;
+    --cards-background: #ffffff;
+    --secondary-text: #999999;
 }
 
 /* 
@@ -409,6 +410,14 @@ body {
 /*--------------sidebar end---------------*/
 
 /* ---------------main-content------------ */
+    div#announcements-card > hr {
+        width: 85%;
+    }
+
+    .card-header {
+        color: blue;
+    }
+
     .project-card,
     #announcements-card,
     #trending-card {
@@ -425,9 +434,16 @@ body {
         height: 160px;
         padding: 15px;
     }
+    .project-card,
+    #announcements-card,
+    #trending-card {
+        padding: 15px;
+    }
 
-    .card-text {
+    .card-text,
+    .about {
         font-size: .8rem;
+        color: var(--secondary-text);
     }
 
     .actions-bar {
@@ -442,6 +458,13 @@ body {
     .action-pic {
         width: 20px;
         height: auto;
+    }
+
+    .users {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        height: 60px;
     }
 
 /* ---------------main-content------------ */
@@ -459,6 +482,3 @@ body {
     grid-template-rows: repeat(20, minmax(20px, 1fr));
 }
 
-.card-header {
-    color: blue;
-}
