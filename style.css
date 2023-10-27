@@ -9,12 +9,9 @@ html {
 }
 
 /* 
-- switch user section alignment to center 
-when in mobile device layout
-- prevent notifications icon from shrinking 
-when decreacing viewport size
-- figure out space distribution between 
-search and user section when in full screen
+- left items to left, right - to right when in two cols layout
+- adjust sidebar collapsing before screen size reaches maximum 
+and starts cover the content
 */
 
 body {
@@ -27,9 +24,33 @@ body {
     font-family: 'Mukta', sans-serif, Arial, Helvetica, sans-serif;
 }
 
+<<<<<<< HEAD
 @media (min-width: 532px) {
+=======
+@media (min-width: 970px) {
+    div.header {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 4fr 3fr;
+        min-width: 450px;
+        justify-items: center;
+        align-items: center;
+    }
+
+    div#profile-pic {
+        display: block;
+    }
+    
+    div.greeting {
+        justify-content: start;
+        margin-left: 90px;
+        gap: 50px;
+    }
+}
+@media (min-width: 800px) {
+>>>>>>> header-layout
     body {
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: 220px calc(100% - 220px);
     }
     
     html {
@@ -44,13 +65,13 @@ body {
     }
 
     div.sidebar {
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: 60px 160px;
     }
 
-    div.header {
-        display: grid;
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-columns: repeat(2, 1fr);
+
+
+    div#search-cont > #search-field {
+        min-width: 0;
     }
 
     div#search-cont > #search-field {
@@ -116,16 +137,77 @@ body {
 
 .header {
     display: grid;
+<<<<<<< HEAD
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: minmax(80px, 1fr) 8fr;
+=======
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+>>>>>>> header-layout
     min-width: 450px;
     justify-items: center;
     align-items: center;
 }
 
+
+
+/* -------------greeting---------------- */
+    .greeting {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        width: 100%;
+    }
+    
+    #greeting-cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #profile-image {
+        width: 60px;
+        height: auto;
+        border-radius: 50px;
+    }
+
+    #profile-name {
+        font-size: 2rem;
+    }
+
+    #profile-pic {
+        display: none;
+    }
+/* -------------greeting---------------- */
+
+/* -------------header-buttons---------- */
+
+.header-button {
+    border-style: none;
+    border-radius: 50px;
+    background-color: var(--secondary-color);
+    width: 80px;
+    height: 35px;
+}
+
+.header-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    width: 350px;
+}
+
+/* -------------header-buttons---------- */
+
 /*--------------search----------------*/
 
  .search {
+<<<<<<< HEAD
     display: grid;
 /*     flex-direction: row;
     align-items: center;
@@ -135,6 +217,17 @@ body {
 } 
 
 #search-button {
+=======
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    width: calc(100% - 80px);
+} 
+
+#search-button {
+    display: block;
+>>>>>>> header-layout
     width: 40px;
     height: auto;
     border-style: none;
@@ -149,9 +242,14 @@ body {
 }
 
 #search-field {
+<<<<<<< HEAD
     width: 313px;
     display: block;
     margin-left: 35px ;
+=======
+    width: 100%;
+    display: block;
+>>>>>>> header-layout
     padding: 0;
     height: 35px;
     border-radius: 50px;
