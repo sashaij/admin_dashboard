@@ -11,9 +11,12 @@ html {
 }
 
 /* 
-- left items to left, right - to right when in two cols layout
-- adjust sidebar collapsing before screen size reaches maximum 
-and starts cover the content
+ - side section direction is column until reachees breakpoint;
+ - make it row when it reaches breakpoint;
+ - and row again after second breakpoint;
+
+ - second column of main section to be set to minmax (0, idk);
+ - add fourth row after breakpoint;
 */
 
 body {
@@ -22,7 +25,7 @@ body {
     grid-template-rows: 1fr 5fr;
     margin: 0;
     height: 100%;
-    width: 100vw;
+    width: 100%;
     font-family: 'Mukta', sans-serif, Arial, Helvetica, sans-serif;
 }
 
@@ -44,6 +47,27 @@ body {
         justify-content: start;
         margin-left: 90px;
         gap: 50px;
+    }
+
+    div.main > div.side-section {
+        flex-direction: column;
+        grid-column: 2 / 3;
+        grid-row: 1 / span 3;
+        padding-left: 0;
+    }
+
+    .side-section > #trending-sec-header {
+        padding-top: 0;
+    }
+
+    div.main {
+        grid-template-columns: 7fr 3fr;
+        padding-right: 0;
+    }
+
+    div#trending-card {
+        flex-direction: column;
+        height: auto;
     }
 }
 @media (min-width: 800px) {
@@ -106,6 +130,20 @@ body {
 
     div#greet-user-name {
         display: block;
+    }
+
+    div.side-section {
+        flex-direction: column;
+        grid-row: 4;
+        grid-column: 1 / 2;
+/*         grid-row: 1 / span 3;
+        grid-column: 2 / 3; */
+        padding-right: 20px;
+    }
+
+
+    #trending-sec-header {
+        padding-top: 10px;
     }
 
 }
@@ -430,8 +468,8 @@ body {
 
     .projects {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        grid-template-rows: repeat(auto-fit, 190px);
+        grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
         grid-column: 1 / 1;
         grid-row: 2 / span 2;
         gap: 20px;
@@ -451,8 +489,7 @@ body {
         grid-template-columns: 100%;
         grid-template-rows: 6fr 1fr ;
         border-left: 6px solid #ffa60d;
-        height: 160px;
-        padding: 15px;
+        height: 85%;
     }
     .project-card,
     #announcements-card,
@@ -498,10 +535,18 @@ body {
     }
 
     .side-section {
-        grid-row: 1 / span 3;
-        grid-column: 2 / 3;
-        padding-right: 20px;
+        grid-row: 4;
+        grid-column: 1 / 2;
+        padding-left: 30px;
     }
+
+    #trending-card {
+        display: flex;
+        flex-direction: row;
+        height: 85px;
+        margin-bottom: 5px;
+    }
+
 
 /* ---------------main-content------------ */
 
@@ -515,7 +560,8 @@ body {
     display: grid;
     grid-column: 2 / 2;
     grid-template-rows: 55px auto;
-    grid-template-columns: 7fr 3fr;
+    grid-template-columns: 100%;
     column-gap: 20px;
+    padding-right: 20px;
 }
 
