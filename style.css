@@ -347,6 +347,10 @@ body {
 
 /*---------sidebar logo and menu menu-----------*/
 
+hr {
+    margin-inline-start: 0;
+}
+
 .logo-text,
 .menu-item {
     display: none;
