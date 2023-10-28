@@ -42,6 +42,10 @@ body {
     div#profile-pic {
         display: block;
     }
+
+    div#user-name {
+        font-size: 1rem;
+    }
     
     div.greeting {
         justify-content: start;
@@ -124,9 +128,6 @@ body {
         border-radius: 100px;
     }
 
-    div#user-name {
-        font-size: 1rem;
-    }
 
     div#greet-user-name {
         display: block;
