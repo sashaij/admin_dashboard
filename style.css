@@ -11,12 +11,11 @@ html {
 }
 
 /* 
- - side section direction is column until reachees breakpoint;
- - make it row when it reaches breakpoint;
- - and row again after second breakpoint;
-
- - second column of main section to be set to minmax (0, idk);
- - add fourth row after breakpoint;
+ - redo SVGs to change color on hover
+ - provide links for menu 
+ and change link colors on hover
+ - change company logo color
+ - add placeholder to the the search field
 */
 
 body {
