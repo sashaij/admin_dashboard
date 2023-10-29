@@ -181,6 +181,9 @@ body {
     align-items: center;
 }
 
+svg:hover {
+    fill: rgb(106, 121, 255);
+}
 
 
 /* -------------greeting---------------- */
