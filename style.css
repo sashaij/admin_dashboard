@@ -286,7 +286,7 @@ button:hover {
 #search-field {
     width: 100%;
     display: block;
-    padding: 0;
+    padding: 0 0 0 20px;
     height: 35px;
     border-radius: 50px;
     border-style: none;
@@ -303,6 +303,10 @@ button:hover {
 /*--------------search----------------*/
 
 /*--------------notifications & user profile--------------*/
+    .logo-text {
+        font-size: 1.5rem;
+    }
+
     .user-section {
         display: flex;
         flex-direction: row;
@@ -550,8 +554,6 @@ hr {
         display: flex;
         flex-direction: column;
         gap: 19px;
-/*         grid-row: 1 / span 2;
-        grid-column: 2 / 3; */
     }
 
     .users {
