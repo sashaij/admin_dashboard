@@ -8,6 +8,8 @@ html {
     --secondary-color: #ffdb0d;
     --cards-background: #ffffff;
     --secondary-text: #999999;
+    --links: #6a799b;
+    --button-on-hover: #fef1a4;
 }
 
 /* 
@@ -182,7 +184,24 @@ body {
 }
 
 svg:hover {
-    fill: rgb(106, 121, 255);
+    fill: var(--links);
+}
+
+a:hover,
+.menu-item:hover,
+.card-header:hover,
+.profile-name:hover,
+#profile-image:hover,
+#notifications-img,
+.user-pic-img:hover {
+    color: var(--links);
+    cursor: pointer;
+    fill: var(--links);
+}
+
+button:hover {
+    background-color: var(--button-on-hover);
+    cursor: pointer;
 }
 
 
